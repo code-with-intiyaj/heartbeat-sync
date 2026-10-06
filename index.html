@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💓 Heartbeat Sync — Dil Hi To Hai</title>
+    <meta
+      name="description"
+      content="A romantic particle animation — dil hi to hai beat, approach each other, and merge into one."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas id="main"></canvas>
+
+    <!-- Tap to start overlay -->
+    <div id="overlay">
+      <div class="overlay-heart">💓</div>
+      <div class="overlay-title">Heartbeat Sync</div>
+      <div class="overlay-sub">Tap to feel the love</div>
+    </div>
+
+    <!-- Settings button -->
+    <button id="settingsBtn" title="Customize">⚙</button>
+
+    <!-- Settings panel -->
+    <div id="settingsPanel">
+      <div class="panel-title">
+        💓 Customize
+        <button class="panel-close" id="panelClose">✕</button>
+      </div>
+
+      <label class="field-label">Name 1 (Left Heart)</label>
+      <input
+        id="inp-name1"
+        class="field-input"
+        type="text"
+        value="Me"
+        maxlength="16"
+      />
+
+      <label class="field-label">Name 2 (Right Heart)</label>
+      <input
+        id="inp-name2"
+        class="field-input"
+        type="text"
+        value="You"
+        maxlength="16"
+      />
+
+      <label class="field-label">Heart 1 Color</label>
+      <div class="color-row" id="color1-row">
+        <div class="color-opt active" data-scheme="white">🤍 White</div>
+        <div class="color-opt" data-scheme="pink">🌸 Pink</div>
+        <div class="color-opt" data-scheme="red">❤️ Red</div>
+      </div>
+
+      <label class="field-label">Heart 2 Color</label>
+      <div class="color-row" id="color2-row">
+        <div class="color-opt active" data-scheme="white">🤍 White</div>
+        <div class="color-opt" data-scheme="purple">💜 Purple</div>
+        <div class="color-opt" data-scheme="blue">💙 Blue</div>
+      </div>
+
+      <label class="field-label">Main Message</label>
+      <input
+        id="inp-msg"
+        class="field-input"
+        type="text"
+        value="Dil Hi To Hai"
+        maxlength="28"
+      />
+
+      <label class="field-label">Subtitle</label>
+      <input
+        id="inp-sub"
+        class="field-input"
+        type="text"
+        value="Forever Yours 💛"
+        maxlength="32"
+      />
+
+      <div class="divider"></div>
+
+      <label class="field-label">Heart Pulse Speed</label>
+      <div class="color-row" id="speed-row">
+        <div class="color-opt" data-speed="slow">🐢 Slow</div>
+        <div class="color-opt active" data-speed="normal">💓 Normal</div>
+        <div class="color-opt" data-speed="fast">⚡ Fast</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <label class="field-label">Sound</label>
+      <div class="color-row" id="sound-row">
+        <div class="color-opt active" data-sound="on">🔊 On</div>
+        <div class="color-opt" data-sound="off">🔇 Off</div>
+      </div>
+    </div>
+
+    <!-- Control bar -->
+    <div id="controlBar">
+      <button class="ctrl-btn" id="btn-restart">↺ Restart</button>
+      <button class="ctrl-btn rec" id="btn-rec">⏺ Record</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
